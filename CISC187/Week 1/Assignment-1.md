@@ -37,3 +37,10 @@ int main() {
     //For example, if an array size is 100, one step for deletion and 99 steps to shift elements in an array, which gives a total of N steps.
 //search- refers to looking for a particular element in an array (can take one or more steps)
     //if the element is at index 0, then it would take only a single step. If the element is at the last index, then it would take N steps.
+
+
+//1  explain mycode
+//2  4 bytes
+//3  100 (101 for steps referring to insertion operations)
+//4  searching for a specific element in an array depends where is that element located (my code element 49 should take 49 steps to recover)\
+//5 research how to find memory address in an array. --use address-of operator "& "

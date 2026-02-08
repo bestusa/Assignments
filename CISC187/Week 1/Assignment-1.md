@@ -20,12 +20,12 @@ int main() {
 
     cout << "\n"<< "The size of element's array is " << sizeof(elements) << " bytes" << "\n";
 
-    for (int i=0; i < 100; i++) {
-        std::cout <<"The memory address of element[" << i << "] is: " << &elements[i] << endl;
-    }
+    cout <<"The memory address of element[10] is: " << &elements[10] << endl;
+
 
     return 0;
 }
+
 
 //notes:
 //Read-  Is considered a single step operation to retrieve an element
@@ -39,8 +39,14 @@ int main() {
     //if the element is at index 0, then it would take only a single step. If the element is at the last index, then it would take N steps.
 
 
-//1  explain mycode
-//2  4 bytes
-//3  100 (101 for steps referring to insertion operations)
-//4  searching for a specific element in an array depends where is that element located (my code element 49 should take 49 steps to recover)\
+
+//1  explain mycode(video)
+//2  4 bytes 400 total
+//3  read: always 1
+//   insertion beginning: 1 steps
+//   insertion at end: 100
+//   deletion beginning: 1 steps
+//   deletion end: 100
+//4  searching for a specific element in an array depends where is that element located search every instance of a given value of N elements
+//   would yield N steps
 //5 research how to find memory address in an array. --use address-of operator "& "

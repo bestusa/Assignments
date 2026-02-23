@@ -1,0 +1,108 @@
+# Christopher Aragon
+# CISC 187 / Professor Khan
+## Video link: ( https://sdccd.us-west-2.instructuremedia.com/embed/401e3b83-052e-448d-a880-5558c435130a  )
+## Activity 3A Arrays
+
+```C++
+cout << "This is Activity 3A";
+```
+
+
+
+1. Use Big O Notation to describe the time complexity of an algorithm that takes 4 N + 16 steps.
+
+
+-In big O notation, an algorithm running at 4N +16 steps of work is 
+expressed as O(N). 
+-Which means the algorithm has linear growth. 
+-We ignore the coefficients and constants in time complexity because in the long run 
+(a huge amount of data) , the algorithm behaves like a degree 1 graph.
+
+-For example, when an array is sorted using a 4N +16 step algorithm the projected 
+amount of steps for an array of size 300 is 1,216 steps or about 1,200 steps. 
+-Dividing these numbers gives a consistent rate of change that is linear
+
+
+
+
+2.Use Big O Notation to describe the time complexity of an algorithm that takes 2 N^2.
+
+-The time complexity is O(n^2). 
+-A great way to identify this sort of algorithm is when the 
+function has nested loops.
+
+
+
+
+
+3.Use Big O Notation to describe the time complexity of the following function, which returns the 
+sum of all numbers of an array after the numbers have been doubled
+
+```
+def double_then_sum(array) 
+	doubled_array = []
+
+	array.each do |number| 
+		doubled_array << number *= 2
+	end
+
+	sum = 0
+
+	doubled_array.each do |number| 
+		sum += number
+	end
+	return sum 
+end
+
+```
+-The time complexity of this algorithm is O(N) meaning it has a linear type of structure.
+-The first do loop doubles the array and that happens only once (which equates to 1N steps)
+-The second do loop iterates through the new double_array once as well which also takes steps.
+-Therefore the total operations of this code is 2N steps, but is represented as O(N) using O(N) time complexity.
+
+
+
+
+4.Use Big O Notation to describe the time complexity of the 
+following function, which accepts an array of strings and prints each string in multiple cases:
+
+
+```
+def multiple_cases(array) 
+	array.each do |string|
+		puts string.upcase 
+		puts string.downcase 
+		puts string.capitalize
+	end 
+end
+```
+
+
+
+-This function performs a total of four steps linearly.
+-one in the .each function
+-three inside the loop performing .upcase, .downcase, .capitalize.
+-So the operation equates to 3N and we represent that as O(N) in time complexity.
+
+
+
+5.The next function iterates over an array of numbers, and for each number whose index is even, 
+it prints the sum of that number plus every number in the array. What is this function’s efficiency 
+in terms of Big O Notation?
+
+```
+def every_other(array) 
+	array.each_with_index do |number, index|
+		if index.even?
+			array.each do |other_number|
+            	puts number + other_number
+			end 
+		end
+	end 
+end
+```
+
+-This function runs approximately at ½ N^2 steps. In time complexity this function run at O(N^2) efficiency. 
+-This is because the outer loop runs N time and the inner loop runs ½ N times. 
+-This is because it has a conditional statement only skipping the odd integers and iterating to the even integers. The big differences with this function is that it has nested loops making the time complexity a quadric. 
+
